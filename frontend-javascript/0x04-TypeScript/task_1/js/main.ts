@@ -4,43 +4,42 @@ interface Teacher {
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
-  [key: string]: any; // allows adding any other attribute
+  [key: string]: any; // allow any other attributes
 }
 
+// Example usage
 const teacher3: Teacher = {
   firstName: 'John',
-  fullTimeEmployee: false,
   lastName: 'Doe',
+  fullTimeEmployee: false,
   location: 'London',
   contract: false,
 };
 
 console.log(teacher3);
 
-// ---- Step 2: Directors interface ----
-
 interface Directors extends Teacher {
   numberOfReports: number;
 }
 
+// Example usage
 const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
-  location: 'London',
   fullTimeEmployee: true,
+  location: 'London',
   numberOfReports: 17,
 };
 
 console.log(director1);
-
-// ---- Step 3: printTeacher ----
 
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
+  return `${firstName[0]}. ${lastName}`;
 };
 
-console.log(printTeacher("John", "Doe"));
+// Example usage
+console.log(printTeacher('John', 'Doe')); // J. Doe
