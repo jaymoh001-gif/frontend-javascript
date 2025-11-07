@@ -10,7 +10,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: "ts-loader",
+        loader: 'ts-loader',
         options: {
           transpileOnly: true
         }
@@ -21,10 +21,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 8080,
-    open: true
+    contentBase: "./dist"
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
@@ -38,5 +35,3 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   }
 };
-
-
