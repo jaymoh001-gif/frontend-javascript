@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",        // output folder for compiled JS
+    "rootDir": "./js",         // source TS folder
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["js/**/*"]
+}
+
